@@ -1,4 +1,5 @@
 import re
+from qfpga import gate, circuit
 
 def createGate(str):
   m = re.search('^(\w+)\((.*?)\) (.+)$', str)
