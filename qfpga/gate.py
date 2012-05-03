@@ -4,4 +4,4 @@ class Gate():
     self.matrix_ = matrix
 
   def transform(input):
-    
+    return input
