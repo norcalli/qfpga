@@ -62,20 +62,11 @@ class Qubit():
     return '{} = {}'.format(self.name, self.state)
 
   def transform(self, m):
-    assert(m.length == self.size)
+    # assert(m.length == self.size)
+    assert(m.size[0] == self.size)
     for i in range(self.size):
       self[i] = sum(m[i][k] * self[k] for k in range(self.size))
     return self
-
-class Vector:
-  pass
-
-class Matrix:
-  def __init__(self, m, n):
-    self.size = (m, n)
-    
-
-def MatrixVectorMultip
 
 def cache(fn):
   result = None

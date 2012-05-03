@@ -6,11 +6,14 @@ class QMatrix():
   """
   def __init__(self, *m):
     # Remember: vectors are matrices.
+    self.size = (len(m), len(m[0]))
     self.matrix_ = m
 
   def __iter__(self):
     for i in range(len(self.matrix_)):
       yield i
+    # for x in self.matrix_:
+    #   yield x
 
   def __getitem__(self, i):
     return self.matrix_[i]
@@ -44,3 +47,13 @@ class QMatrix():
           return false
     return true
 
+  def __str__(self):
+    return '\n'.join(str(x) for x in self.matrix_)
+
+
+class QVector(QMatrix):
+  def __init__(self, *elements):
+    super(QVector, self).__init__(*[[x] for x in elements])
+
+  def __str__(self):
+    return '<{}>'.format(', '.join(str(x[0]) for x in self.matrix_))

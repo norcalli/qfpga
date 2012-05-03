@@ -10,7 +10,8 @@ X = Matrix([0, 1], [1, 0])
 Y = Matrix([0, -i], [i, 0])
 Z = Matrix([1, 0], [0, -1])
 
-I = Matrix([0, 1], [1, 0])
+# I = Matrix([0, 1], [1, 0])
+I = Matrix([1, 0], [0, 1])
 
 CNOT = Matrix([1,0,0,0],
               [0,1,0,0],
