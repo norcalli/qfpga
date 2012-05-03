@@ -1,3 +1,7 @@
 class Gate():
-  def __init__(self, type, args, inputs):
-    self.type = type
+  def __init__(self, name, matrix, args):
+    self.name = name
+    self.matrix_ = matrix
+
+  def transform(input):
+    
