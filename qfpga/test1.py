@@ -11,14 +11,14 @@ CNOTGate = Gate('CNOT', CNOT, None)
 q = Qubit()
 qs = [Qubit() for _ in range(2)]
 
-for x in qs:
-  x[0] = random.random() + i * random.random()
-  x[1] = random.random() + i * random.random()
-  x.normalize()
+# for x in qs:
+#   x[0] = random.random() + i * random.random()
+#   x[1] = random.random() + i * random.random()
+#   x.normalize()
 
-print(HGate.transform(q))
+print(HGate.transform(qs[0]))
 print(CNOTGate.transform(qs))
-
+print(qs[0].measure())
 
 v = QVector(1, 0)
 
