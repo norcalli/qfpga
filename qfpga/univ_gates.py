@@ -1,5 +1,5 @@
 # from qmatrix import QMatrix as Matrix
-from qubit import Matrix, Vector
+from matrix import Matrix, Vector
 import math
 
 i = complex(0,1)
